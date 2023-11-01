@@ -1,1 +1,3 @@
-export { sum } from "./temp";
+export { default as IronTreeNode } from './class/Node';
+export { default as IronTree } from './class/Tree';
+export { CriteriaCallback as IronTreeCriteriaCallback, NodeCallback as IronTreeNodeCallback } from './class/Tree';
