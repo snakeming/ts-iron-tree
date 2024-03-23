@@ -2,7 +2,7 @@
   /*for vscode*/
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "ESNext",
     "strict": true,
     "sourceMap": true,
     "esModuleInterop": true,
