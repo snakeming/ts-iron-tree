@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "module": "commonjs",
+        "module": "ESNext",
+        "moduleResolution": "node",
         "declaration": true,
         "outDir": "./lib",
         "declarationDir": "./lib-types",
@@ -10,8 +11,9 @@
             "./src/@types"
         ],
         "strict": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "esModuleInterop": true,
+        "verbatimModuleSyntax": false,
         "paths": {
             "@/*": [
                 "./src/*"
@@ -19,6 +21,11 @@
         }
     },
     "include": [
-        "./src/**/*",
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./test/**/*",
+        "./lib/**/*",
+        "./backup/**/*"
     ]
 }
