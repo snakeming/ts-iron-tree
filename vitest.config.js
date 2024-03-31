@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
 import path from 'path'
+import { defineConfig } from 'vite'
 
 // https://github.com/temporalio/ui/blob/main/vitest.config.ts
 export default defineConfig({
@@ -10,11 +10,4 @@ export default defineConfig({
             '@test': path.resolve(__dirname, './test'),
         },
     },
-    test: {
-        globals: true,
-        coverage: {
-            reporter: ['text', 'json', 'html'],
-        },
-    },
-
 })

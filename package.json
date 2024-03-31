@@ -1,20 +1,21 @@
 {
   "name": "ts-iron-tree",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
+  "type": "module",
   "files": [
-    "lib/**/*"
+    "dist"
   ],
-  "main": "./lib/index.js",
-  "types": "./lib/api-index.d.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ts-iron-tree.js",
+      "require": "./dist/ts-iron-tree.cjs"
+    }
+  },
   "scripts": {
-    "test": "vitest --run  --globals --config ./vitest.config.js",
-    "test-ui": "vitest --ui",
-    "test-c": "vitest run --coverage",
-    "build": "tsc --project tsconfig-build.json && tsc-alias -p tsconfig-build.json",
-    "build-types": "api-extractor run",
-    "build-all": "npm run build && npm run build-types && npm run minify",
-    "minify": "minify-all-js ./lib"
+    "build": "tsc --project tsconfig-build.json && vite build",
+    "test": "vitest --run --config vitest.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,11 +25,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.38.0",
     "@types/node": "^20.8.9",
-    "minify-all-js": "^0.1.9",
-    "tsc-alias": "^1.8.8",
     "typescript": "^5.2.2",
+    "vite-plugin-dts": "^3.8.1",
     "vitest": "^0.34.6"
   }
 }
