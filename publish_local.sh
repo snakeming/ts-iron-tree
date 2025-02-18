@@ -10,7 +10,7 @@ npm run build-all
 # npm unpublish  --registry http://localhost:4873/ ts-iron-tree@1.0.0 --force
 
 
-npm publish --registry http://192.168.31.223:4873/
+npm publish --registry=http://localhost:4873
 
 # npm set registry http://localhost:4873/
 # npm config delete registry
